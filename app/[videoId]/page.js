@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { getSingleLike } from '../_lib/dataService';
+import VimeoEmbed from '../_components/VimeoEmbed';
 
 export default async function Page({ params }) {
   const likeData = await getSingleLike(params.videoId);
@@ -8,13 +9,15 @@ export default async function Page({ params }) {
 
   return (
     <div className="">
+      <h1 className="text-3xl">
+        REDO SUPABASE WITH ALL THE VIMEO player_embed_url links
+      </h1>
       <p>{name}</p>
       <p>{author}</p>
       <p>{release_time}</p>
       <p>{link}</p>
       <p>{thumbnail}</p>
-      // FIGURE OUT HOW TO EMBED VIMEO VID
-      <iframe src="https://player.vimeo.com/606547650" allowFullScreen />
+      <VimeoEmbed link={link} />
     </div>
   );
 }
