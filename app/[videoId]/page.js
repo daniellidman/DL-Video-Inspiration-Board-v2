@@ -13,7 +13,7 @@ export default async function Page({ params }) {
         REDO SUPABASE WITH ALL THE VIMEO player_embed_url links
       </h1>
       <h1 className="m-6 text-2xl font-bold">{name}</h1>
-      <p>{author}</p>
+      <p>by {author}</p>
       <p>{release_time}</p>
       <p>{link}</p>
       <p>{thumbnail}</p>
