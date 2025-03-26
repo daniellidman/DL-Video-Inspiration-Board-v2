@@ -16,6 +16,7 @@ export default async function Page({ params }) {
       <p>by {author}</p>
       <p>{release_time}</p>
       <p>{link}</p>
+      <Image src={thumbnail} />
       <p>{thumbnail}</p>
       <VimeoEmbed link={link} />
     </div>
