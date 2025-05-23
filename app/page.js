@@ -2,7 +2,19 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { getLikes } from './_lib/dataService';
+import VideoDetails from './_components/VideoDetails';
+import VideoLibrary from './_components/VideoLibrary';
 
+export default function Page() {
+  return (
+    <div>
+      <VideoDetails />
+      <VideoLibrary />
+    </div>
+  );
+}
+
+/*
 const allLikes = await getLikes();
 
 export default function Page() {
@@ -34,3 +46,4 @@ function Inspo(props) {
     </div>
   );
 }
+*/
