@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 function VideoDetails() {
   return (
-    <div className="grid grid-cols-2">
+    <div className="mb-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">
       <EmbeddedVideo />
       <VideoInfo />
     </div>
@@ -12,8 +12,7 @@ function VideoDetails() {
 function EmbeddedVideo() {
   return (
     <div className="m-5">
-      <div className="h-96 w-full rounded-md bg-red-300">
-        <h1>Video Here</h1>
+      <div className="w-full rounded-md">
         <TempEmbedCode />
       </div>
     </div>
@@ -22,7 +21,7 @@ function EmbeddedVideo() {
 
 function VideoInfo() {
   return (
-    <div className="m-5">
+    <div className="m-5 overflow-scroll text-wrap break-words">
       <h1 className="text-2xl font-bold text-white">
         SEAWATCH - Human rights are #non-negotiable
       </h1>
@@ -50,22 +49,15 @@ function VideoInfo() {
 
 function TempEmbedCode() {
   return (
-    <>
-      <div className="relative w-full">
-        <iframe
-          src="https://player.vimeo.com/video/606547650?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-          frameborder="0"
-          width="1337"
-          height="640"
-          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-          className=""
-          // style="position:absolute;top:0;left:0;width:100%;height:100%;"
-          title="SEAWATCH - Human rights are #non-negotiable"
-        ></iframe>
-      </div>
-
-      <script src="https://player.vimeo.com/api/player.js"></script>
-    </>
+    <div className="relative h-0 overflow-hidden rounded-xl pb-[56.25%] shadow-md">
+      <iframe
+        src="https://player.vimeo.com/video/724972964?h=59d1872ce3&autoplay=0"
+        frameBorder="0"
+        allow="fullscreen; picture-in-picture"
+        allowFullScreen
+        className="absolute left-0 top-0 h-full w-full"
+      ></iframe>
+    </div>
   );
 }
 

@@ -1,3 +1,7 @@
 export default function Logo() {
-  return <h1>DL Video Inspiration Board</h1>;
+  return (
+    <h1 className="m-6 text-3xl font-bold text-white">
+      🎬 DL Video Inspiration Board
+    </h1>
+  );
 }
