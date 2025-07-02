@@ -1,10 +1,17 @@
+'use client';
+
 import Link from 'next/link';
+import AddNewVideo from './AddNewVideo';
+import { useState } from 'react';
 
 function VideoDetails() {
+  const [addVideoState, setAddVideoState] = useState(false);
+
   return (
     <div className="mb-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">
       <EmbeddedVideo />
       <VideoInfo />
+      <AddNewVideo />
     </div>
   );
 }
