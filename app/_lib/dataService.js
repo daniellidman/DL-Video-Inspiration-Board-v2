@@ -1,7 +1,7 @@
 import { supabase } from './supabase';
 
 export async function getLikes() {
-  let { data, error } = await supabase.from('likes').select('*');
+  let { data, error } = await supabase.from('videos').select('*');
 
   if (error) {
     console.error(error);
@@ -15,7 +15,7 @@ export async function getLikes() {
 
 export async function getSingleLike(videoId) {
   let { data, error } = await supabase
-    .from('likes')
+    .from('videos')
     .select('*')
     .eq('id', videoId);
 
