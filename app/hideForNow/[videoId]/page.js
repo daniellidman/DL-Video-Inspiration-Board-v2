@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { getSingleLike } from '../_lib/dataService';
-import VimeoEmbed from '../_components/VimeoEmbed';
+import { getSingleLike } from '../../_lib/dataService';
+import VimeoEmbed from '../../_components/VimeoEmbed';
 
 export default async function Page({ params }) {
   const likeData = await getSingleLike(params.videoId);
