@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import AddNewVideo from './AddNewVideo';
 import { useState } from 'react';
+import NewVideoForm from './NewVideoForm';
 
 function VideoDetails() {
   const [addVideoState, setAddVideoState] = useState(false);
@@ -10,9 +11,15 @@ function VideoDetails() {
   console.log(addVideoState);
 
   return (
-    <div className="mb-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">
-      <EmbeddedVideo />
-      {addVideoState ? <AddNewVideo /> : <VideoInfo />}
+    <div>
+      {addVideoState ? (
+        <NewVideoForm />
+      ) : (
+        <div className="mb-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">
+          <EmbeddedVideo />
+          <VideoInfo />
+        </div>
+      )}
       <div className="col-span-2">
         <button className="text-white">Edit</button>
         <button
@@ -26,7 +33,6 @@ function VideoDetails() {
   );
 }
 
-
 function EmbeddedVideo() {
   return (
     <div className="m-5">
@@ -39,13 +45,11 @@ function EmbeddedVideo() {
 
 function VideoInfo() {
   return (
-    <div className="m-5 overflow-scroll text-wrap break-words">
-      <h1 className="text-2xl font-bold text-white">
+    <div className="m-5 overflow-scroll text-wrap break-words text-white">
+      <h1 className="text-2xl font-bold">
         SEAWATCH - Human rights are #non-negotiable
       </h1>
-      <h2 className="mb-1 mt-1 text-lg font-semibold text-white">
-        Stefanie Soho
-      </h2>
+      <h2 className="mb-1 mt-1 text-lg font-semibold">Stefanie Soho</h2>
       <Link
         href="https://vimeo.com/606547650"
         target="_blank"
@@ -53,14 +57,11 @@ function VideoInfo() {
       >
         https://vimeo.com/606547650
       </Link>
-      <h2 className="mt-10 text-lg font-semibold text-white">Notes</h2>
-      <p className="mb-10 text-xs text-white">
-        I like the color grade on this video.
-      </p>
-      <h2 className="text-lg font-semibold text-white">Tags</h2>
-      <p className="text-xs text-white">
-        LHNL Case Study, Bayside DS, Summit 2025
-      </p>
+      <p className="mb-10 mt-2 text-xs">2024</p>
+      <h2 className="mt-10 text-lg font-semibold">Notes</h2>
+      <p className="mb-10 text-xs">I like the color grade on this video.</p>
+      <h2 className="text-lg font-semibold">Tags</h2>
+      <p className="text-xs">LHNL Case Study, Bayside DS, Summit 2025</p>
     </div>
   );
 }
