@@ -33,7 +33,6 @@ function NewVideoForm() {
     const data = await response.json();
     // return data.thumbnail_url;
 
-    console.log(oEmbedUrl);
     setFormData((prevState) => ({
       ...prevState,
       thumbnail: data.thumbnail_url,

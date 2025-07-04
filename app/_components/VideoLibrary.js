@@ -1,3 +1,4 @@
+'use client ';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getLikes } from '../_lib/dataService';
@@ -22,7 +23,7 @@ async function Inspo(props) {
   return (
     <div className="relative h-64 w-64 flex-grow" key={props.link}>
       <div className="hover:opacity-10">
-        <Link href={`/${props.id}`} title={props.name}>
+        <Link href={`/?${props.id}`} title={props.name}>
           <Image
             src={thumbnailSRC}
             fill

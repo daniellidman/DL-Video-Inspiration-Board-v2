@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import AddNewVideo from './AddNewVideo';
 import { useState } from 'react';
 import NewVideoForm from './NewVideoForm';
 
