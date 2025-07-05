@@ -2,16 +2,19 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import NewVideoForm from './NewVideoForm';
 import Image from 'next/image';
 
 function DLVideoInspirationBoardComponent({ allLikes }) {
   let likes = allLikes;
-  const defaultSelection = likes[0].id;
-  const [selectedVideo, setSelectedVideo] = useState(defaultSelection);
+  const [selectedVideo, setSelectedVideo] = useState();
 
   const handleClick = (video) => {
     setSelectedVideo(video);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
   };
 
   return (
@@ -25,7 +28,7 @@ function DLVideoInspirationBoardComponent({ allLikes }) {
             <div className="relative h-64 w-64 flex-grow" key={like.id}>
               <div className="hover:opacity-10">
                 <Image
-                  src="/tempThumb.jpg"
+                  src={like.thumbnail ? like.thumbnail : '/tempThumb.jpg'}
                   fill
                   className="z-10 w-full object-cover"
                   alt={like.name}
@@ -45,45 +48,33 @@ function DLVideoInspirationBoardComponent({ allLikes }) {
 export default DLVideoInspirationBoardComponent;
 
 function VideoDetails({ selectedVideo }) {
-  const [addVideoState, setAddVideoState] = useState(false);
   const video = selectedVideo;
+
+  if (!selectedVideo) {
+    return <></>;
+  }
 
   return (
     <div>
-      {addVideoState ? (
-        <NewVideoForm />
-      ) : (
-        <div className="mb-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">
-          <div className="m-5">
-            <div className="w-full rounded-md">
-              <VimeoEmbedCode video={video} />
-            </div>
+      <div className="mb-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">
+        <div className="m-5">
+          <div className="w-full rounded-md">
+            <VimeoEmbedCode video={video} />
           </div>
-          <VideoInfo video={video} />
         </div>
-      )}
-      <div className="col-span-2">
-        <button className="text-white">Edit</button>
-        <button
-          onClick={() => setAddVideoState(!addVideoState)}
-          className="text-white"
-        >
-          Add New
-        </button>
+        <VideoInfo video={video} />
       </div>
     </div>
   );
 }
 
 function VideoInfo({ video }) {
-  console.log(video);
-
   return (
     <div className="m-5 overflow-scroll text-wrap break-words text-white">
       <h1 className="text-2xl font-bold">{video.name}</h1>
       <h2 className="mb-1 mt-1 text-lg font-semibold">{video.author}</h2>
       <Link
-        href="google.com"
+        href={video.url ? video.url : ''}
         target="_blank"
         className="mb-10 text-sm text-blue-200 underline"
       >

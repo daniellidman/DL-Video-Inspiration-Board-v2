@@ -1,17 +1,15 @@
-import Image from 'next/image';
-import Link from 'next/link';
+export const fetchCache = 'force-no-store'; // alternative to force-dynamic
+
 import { getLikes } from './_lib/dataService';
-import VideoDetails from './_components/VideoDetails';
-import VideoLibrary from './_components/VideoLibrary';
-import DLVideoInspirationBoardComponent from './_components/dlVideoInspirationBoardComponent';
+import DLVideoInspirationBoardComponent from './_components/DLVideoInspirationBoardComponent';
+
+console.log('Page Component Running');
 
 export default async function Page() {
   const allLikes = await getLikes();
   return (
     <div>
       <DLVideoInspirationBoardComponent allLikes={allLikes} />
-      {/* <VideoDetails />
-      <VideoLibrary /> */}
     </div>
   );
 }
