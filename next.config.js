@@ -5,6 +5,10 @@ module.exports = {
         protocol: 'https',
         hostname: 'i.vimeocdn.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'img.youtube.com',
+      },
     ],
   },
 };
