@@ -86,6 +86,7 @@ function VideoInfo({ video }) {
       <p className="mb-10 text-xs">{video.notes}</p>
       <h2 className="text-lg font-semibold">Tags</h2>
       <p className="text-xs">{video.tags}</p>
+      <button className="my-6 text-xs">Edit</button>
     </div>
   );
 }
