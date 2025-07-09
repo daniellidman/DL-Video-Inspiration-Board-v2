@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Tweet } from 'react-tweet';
+import { updateSupabase } from '../_lib/dataService';
 
 function DLVideoInspirationBoardComponent({ allLikes }) {
   let likes = allLikes;
@@ -49,6 +50,7 @@ function DLVideoInspirationBoardComponent({ allLikes }) {
 export default DLVideoInspirationBoardComponent;
 
 function VideoDetails({ selectedVideo }) {
+  const [showEditComponent, setShowEditComponent] = useState(false);
   const video = selectedVideo;
 
   if (!selectedVideo) {
@@ -57,13 +59,36 @@ function VideoDetails({ selectedVideo }) {
 
   return (
     <div>
+      {showEditComponent ? <EditComponent video={video} /> : <></>}
       <div className="mb-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">
         <div className="m-5">
           <div className="w-full rounded-md">
             <VideoEmbedCode video={video} />
           </div>
         </div>
-        <VideoInfo video={video} />
+        {/* <VideoInfo video={video} /> */}
+        <div className="m-5 overflow-scroll text-wrap break-words text-white">
+          <h1 className="text-2xl font-bold">{video.name}</h1>
+          <h2 className="mb-1 mt-1 text-lg font-semibold">{video.author}</h2>
+          <Link
+            href={video.url ? video.url : ''}
+            target="_blank"
+            className="mb-10 text-sm text-blue-200 underline"
+          >
+            {video.url}
+          </Link>
+          <p className="mb-10 mt-2 text-xs">{video.yearPublished}</p>
+          <h2 className="mt-10 text-lg font-semibold">Notes</h2>
+          <p className="mb-10 text-xs">{video.notes}</p>
+          <h2 className="text-lg font-semibold">Tags</h2>
+          <p className="text-xs">{video.tags}</p>
+          <button
+            className="my-6 text-xs"
+            onClick={() => setShowEditComponent(!showEditComponent)}
+          >
+            Edit
+          </button>
+        </div>
       </div>
     </div>
   );
@@ -86,7 +111,12 @@ function VideoInfo({ video }) {
       <p className="mb-10 text-xs">{video.notes}</p>
       <h2 className="text-lg font-semibold">Tags</h2>
       <p className="text-xs">{video.tags}</p>
-      <button className="my-6 text-xs">Edit</button>
+      <button
+        className="my-6 text-xs"
+        onClick={() => setShowEditComponent(!showEditComponent)}
+      >
+        Edit
+      </button>
     </div>
   );
 }
@@ -163,7 +193,64 @@ function VideoEmbedCode({ video }) {
   }
 }
 
-/*
-Error catching:
+function EditComponent({ video }) {
+  const [value, setValue] = useState({
+    ...video,
+  });
 
-*/
+  const handleChange = (e) => {
+    const { name, formValue } = e.target;
+    setValue((prevState) => ({ ...prevState, [name]: formValue }));
+  };
+
+  const handleSubmit = () => {};
+
+  console.log(value);
+  return (
+    <form className="text-white">
+      <p>Name</p>
+      <input
+        type="text"
+        name="name"
+        value={value.name}
+        onChange={handleChange}
+        className="w-3/4 bg-gray-800"
+      ></input>
+      <p>Author</p>
+      <input
+        type="text"
+        name="author"
+        value={value.author}
+        onChange={handleChange}
+        className="w-3/4 bg-gray-800"
+      ></input>
+      <p>URL</p>
+      <input
+        type="text"
+        name="url"
+        value={value.url}
+        onChange={handleChange}
+        className="w-3/4 bg-gray-800"
+      ></input>
+      <p>Notes</p>
+      <input
+        type="text"
+        name="notes"
+        value={value.notes}
+        onChange={handleChange}
+        className="w-3/4 bg-gray-800"
+      ></input>
+      <p>Thumbnail Link</p>
+      <input
+        type="text"
+        name="thumbnail"
+        value={value.thumbnail}
+        onChange={handleChange}
+        className="w-3/4 bg-gray-800"
+      ></input>
+      <button onClick={handleSubmit} className="block">
+        Submit
+      </button>
+    </form>
+  );
+}

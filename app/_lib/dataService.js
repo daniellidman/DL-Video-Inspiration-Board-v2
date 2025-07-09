@@ -28,3 +28,15 @@ export async function getSingleLike(videoId) {
 
   return data;
 }
+
+export async function updateSupabase(video) {
+  const { data, error } = await supabase
+    .from('videos')
+    .update(video)
+    .eq('id', video.id);
+
+  console.log(data);
+
+  if (error) throw new Error('Database could not be updated');
+  return data;
+}
