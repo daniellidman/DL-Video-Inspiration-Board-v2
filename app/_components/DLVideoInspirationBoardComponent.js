@@ -4,7 +4,8 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Tweet } from 'react-tweet';
-import { updateSupabase } from '../_lib/dataService';
+import { supabase } from '../_lib/supabase';
+// import { updateSupabase } from '../_lib/dataService';
 
 function DLVideoInspirationBoardComponent({ allLikes }) {
   let likes = allLikes;
@@ -203,7 +204,12 @@ function EditComponent({ video }) {
     setValue((prevState) => ({ ...prevState, [name]: formValue }));
   };
 
-  const handleSubmit = () => {};
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const { error } = await supabase.from;
+    'videos'.update({ name, author, url, thumbnail, notes }).eq('id', video.id);
+  };
 
   console.log(value);
   return (
