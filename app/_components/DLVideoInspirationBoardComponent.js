@@ -3,9 +3,9 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Tweet } from 'react-tweet';
-import { supabase } from '../_lib/supabase';
-// import { updateSupabase } from '../_lib/dataService';
+import { updateSupabase } from '../_lib/dataService';
+import { useRouter } from 'next/navigation';
+import { VideoEmbedCode } from './VideoEmbedCode';
 
 function DLVideoInspirationBoardComponent({ allLikes }) {
   let likes = allLikes;
@@ -54,209 +54,148 @@ function VideoDetails({ selectedVideo }) {
   const [showEditComponent, setShowEditComponent] = useState(false);
   const video = selectedVideo;
 
+  console.log(selectedVideo);
+
   if (!selectedVideo) {
     return <></>;
   }
 
   return (
     <div>
-      {showEditComponent ? <EditComponent video={video} /> : <></>}
-      <div className="mb-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">
-        <div className="m-5">
-          <div className="w-full rounded-md">
-            <VideoEmbedCode video={video} />
+      {showEditComponent ? (
+        <EditComponent
+          video={video}
+          onClose={() => setShowEditComponent(false)}
+        />
+      ) : (
+        <div className="mb-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">
+          <div className="m-5">
+            <div className="w-full rounded-md">
+              <VideoEmbedCode video={video} />
+            </div>
+          </div>
+          {/* <VideoInfo video={video} /> */}
+          <div className="m-5 overflow-scroll text-wrap break-words text-white">
+            <h1 className="text-2xl font-bold">{video.name}</h1>
+            <h2 className="mb-1 mt-1 text-lg font-semibold">{video.author}</h2>
+            <Link
+              href={video.url ? video.url : ''}
+              target="_blank"
+              className="mb-10 text-sm text-blue-200 underline"
+            >
+              {video.url}
+            </Link>
+            <p className="mb-10 mt-2 text-xs">{video.yearPublished}</p>
+            <h2 className="mt-10 text-lg font-semibold">Notes</h2>
+            <p className="mb-10 text-xs">{video.notes}</p>
+
+            <button
+              className="my-6 rounded-lg p-2 text-sm hover:bg-slate-600"
+              onClick={() => setShowEditComponent(!showEditComponent)}
+            >
+              Edit
+            </button>
           </div>
         </div>
-        {/* <VideoInfo video={video} /> */}
-        <div className="m-5 overflow-scroll text-wrap break-words text-white">
-          <h1 className="text-2xl font-bold">{video.name}</h1>
-          <h2 className="mb-1 mt-1 text-lg font-semibold">{video.author}</h2>
-          <Link
-            href={video.url ? video.url : ''}
-            target="_blank"
-            className="mb-10 text-sm text-blue-200 underline"
-          >
-            {video.url}
-          </Link>
-          <p className="mb-10 mt-2 text-xs">{video.yearPublished}</p>
-          <h2 className="mt-10 text-lg font-semibold">Notes</h2>
-          <p className="mb-10 text-xs">{video.notes}</p>
-          <h2 className="text-lg font-semibold">Tags</h2>
-          <p className="text-xs">{video.tags}</p>
-          <button
-            className="my-6 text-xs"
-            onClick={() => setShowEditComponent(!showEditComponent)}
-          >
-            Edit
-          </button>
-        </div>
-      </div>
+      )}
     </div>
   );
 }
 
-function VideoInfo({ video }) {
-  return (
-    <div className="m-5 overflow-scroll text-wrap break-words text-white">
-      <h1 className="text-2xl font-bold">{video.name}</h1>
-      <h2 className="mb-1 mt-1 text-lg font-semibold">{video.author}</h2>
-      <Link
-        href={video.url ? video.url : ''}
-        target="_blank"
-        className="mb-10 text-sm text-blue-200 underline"
-      >
-        {video.url}
-      </Link>
-      <p className="mb-10 mt-2 text-xs">{video.yearPublished}</p>
-      <h2 className="mt-10 text-lg font-semibold">Notes</h2>
-      <p className="mb-10 text-xs">{video.notes}</p>
-      <h2 className="text-lg font-semibold">Tags</h2>
-      <p className="text-xs">{video.tags}</p>
-      <button
-        className="my-6 text-xs"
-        onClick={() => setShowEditComponent(!showEditComponent)}
-      >
-        Edit
-      </button>
-    </div>
-  );
-}
-
-function VideoEmbedCode({ video }) {
-  // NO VIDEO URL
-
-  // VIMEO
-  if (video.url.includes('vimeo.com')) {
-    // Extract Vimeo video ID
-    const match = video.url.match(/vimeo\.com\/(?:.*\/)?(\d+)/);
-    if (!match) {
-      throw new Error('Invalid Vimeo URL');
-    }
-    const vimeoId = match[1];
-
-    return (
-      <div className="relative h-0 overflow-hidden rounded-xl pb-[56.25%] shadow-md">
-        <iframe
-          src={`https://player.vimeo.com/video/${vimeoId}?h=59d1872ce3&autoplay=0`}
-          frameBorder="0"
-          allow="fullscreen; picture-in-picture"
-          allowFullScreen
-          className="absolute left-0 top-0 h-full w-full"
-        ></iframe>
-      </div>
-    );
-  }
-
-  // YOUTUBE
-  if (video.url.includes('youtube.com') || video.url.includes('youtu.be')) {
-    const id = video.url.split('?v=')[1];
-
-    return (
-      <div className="relative h-0 overflow-hidden rounded-xl pb-[56.25%] shadow-md">
-        <iframe
-          // width="full"
-          // height="full"
-          src={`https://www.youtube.com/embed/${id}`}
-          title="YouTube video player"
-          frameborder="0"
-          allowfullscreen
-          className="aspect-video w-full"
-        ></iframe>
-      </div>
-    );
-  }
-
-  // TWITTER / X
-  if (video.url.includes('twitter.com' || video.url.includes('x.com'))) {
-    const id = video.url.split('status/')[1];
-
-    console.log(id);
-
-    return <Tweet id={id} />;
-  }
-
-  if (video.url.includes('instagram.com')) {
-    // INSTAGRAM EMBED CODE HERE
-    return <></>;
-  } else {
-    return (
-      <div className="relative h-0 overflow-hidden rounded-xl pb-[56.25%] shadow-md">
-        <img src={video.thumbnail} alt="No embeddable video" width="full" />
-        {/* <iframe
-          src={`https://player.vimeo.com/video/724972964?h=59d1872ce3&autoplay=0`}
-          frameBorder="0"
-          allow="fullscreen; picture-in-picture"
-          allowFullScreen
-          className="absolute left-0 top-0 h-full w-full"
-        ></iframe> */}
-      </div>
-    );
-  }
-}
-
-function EditComponent({ video }) {
-  const [value, setValue] = useState({
+function EditComponent({ video, onClose }) {
+  const router = useRouter();
+  const [formData, setFormData] = useState({
     ...video,
   });
 
   const handleChange = (e) => {
-    const { name, formValue } = e.target;
-    setValue((prevState) => ({ ...prevState, [name]: formValue }));
+    const { name, value } = e.target;
+    setFormData((prevState) => ({ ...prevState, [name]: value }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const { error } = await supabase.from;
-    'videos'.update({ name, author, url, thumbnail, notes }).eq('id', video.id);
+    try {
+      await updateSupabase(formData);
+      onClose();
+      router.refresh();
+    } catch (err) {
+      console.error('Update failed', err);
+    }
   };
 
-  console.log(value);
   return (
-    <form className="text-white">
-      <p>Name</p>
-      <input
-        type="text"
-        name="name"
-        value={value.name}
-        onChange={handleChange}
-        className="w-3/4 bg-gray-800"
-      ></input>
-      <p>Author</p>
-      <input
-        type="text"
-        name="author"
-        value={value.author}
-        onChange={handleChange}
-        className="w-3/4 bg-gray-800"
-      ></input>
-      <p>URL</p>
-      <input
-        type="text"
-        name="url"
-        value={value.url}
-        onChange={handleChange}
-        className="w-3/4 bg-gray-800"
-      ></input>
-      <p>Notes</p>
-      <input
-        type="text"
-        name="notes"
-        value={value.notes}
-        onChange={handleChange}
-        className="w-3/4 bg-gray-800"
-      ></input>
-      <p>Thumbnail Link</p>
-      <input
-        type="text"
-        name="thumbnail"
-        value={value.thumbnail}
-        onChange={handleChange}
-        className="w-3/4 bg-gray-800"
-      ></input>
-      <button onClick={handleSubmit} className="m-2 block">
-        Submit
-      </button>
-    </form>
+    <div className="mx-5 mb-8 grid grid-cols-1 rounded-lg bg-slate-700 py-5 sm:grid-cols-2 lg:grid-cols-2">
+      <div className="m-5 my-auto">
+        <div className="m-auto">
+          <img
+            src={formData.thumbnail ? formData.thumbnail : '/tempThumb.jpg'}
+            alt="thumbnail"
+            fill
+            className="rounded-2xl"
+          />
+        </div>
+      </div>
+      <form className="m-5 overflow-scroll text-wrap break-words text-white">
+        <input
+          type="text"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          className="w-3/4 bg-gray-700 text-2xl font-bold"
+        ></input>
+        <input
+          type="text"
+          name="author"
+          value={formData.author}
+          onChange={handleChange}
+          className="mb-1 mt-1 w-3/4 bg-gray-700 text-lg font-semibold"
+        ></input>
+        <input
+          type="text"
+          name="url"
+          value={formData.url}
+          onChange={handleChange}
+          className="w-3/4 bg-gray-700 text-sm text-blue-200 underline"
+        ></input>
+        <input
+          type="text"
+          name="yearPublished"
+          value={formData.yearPublished}
+          onChange={handleChange}
+          className="mb-10 mt-2 w-3/4 bg-gray-700 text-xs"
+        ></input>
+        <p className="text-lg font-semibold">Notes</p>
+        <input
+          type="text"
+          name="notes"
+          value={formData.notes}
+          onChange={handleChange}
+          className="mb-10 w-full bg-gray-700 text-xs"
+        ></input>
+        <p className="mt-10 text-lg font-semibold">Thumbnail Link</p>
+        <input
+          type="text"
+          name="thumbnail"
+          value={formData.thumbnail}
+          onChange={handleChange}
+          className="mb-6 w-full bg-gray-700 text-xs text-blue-200 underline"
+        ></input>
+        <br></br>
+        <button
+          onClick={handleSubmit}
+          className="mr-2 rounded-lg p-2 text-sm hover:bg-slate-600"
+        >
+          Submit
+        </button>
+        <button
+          onClick={onClose}
+          className="rounded-lg p-2 text-sm hover:bg-slate-600"
+        >
+          Cancel
+        </button>
+      </form>
+    </div>
   );
 }

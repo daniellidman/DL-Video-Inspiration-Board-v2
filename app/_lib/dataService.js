@@ -30,10 +30,12 @@ export async function getSingleLike(videoId) {
 }
 
 export async function updateSupabase(video) {
+  const { name, author, url, yearPublished, thumbnail, notes, id } = video;
+
   const { data, error } = await supabase
     .from('videos')
-    .update(video)
-    .eq('id', video.id);
+    .update({ name, author, url, thumbnail, notes, yearPublished })
+    .eq('id', id);
 
   console.log(data);
 

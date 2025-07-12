@@ -58,7 +58,7 @@ export async function EditComponent({ video }) {
         onChange={handleChange}
         className="w-3/4 bg-gray-800"
       ></input>
-      <button onClick={handleSubmit} className="block">
+      <button onClick={handleSubmit} className="m-2 block">
         Submit
       </button>
     </form>
