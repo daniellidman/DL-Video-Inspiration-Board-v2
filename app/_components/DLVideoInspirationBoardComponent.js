@@ -90,7 +90,7 @@ function VideoDetails({ selectedVideo }) {
             <p className="mb-10 text-xs">{video.notes}</p>
 
             <button
-              className="my-6 rounded-lg p-2 text-sm hover:bg-slate-600"
+              className="my-6 rounded-lg p-2 text-sm hover:bg-gray-600"
               onClick={() => setShowEditComponent(!showEditComponent)}
             >
               Edit
@@ -126,7 +126,7 @@ function EditComponent({ video, onClose }) {
   };
 
   return (
-    <div className="mx-5 mb-8 grid grid-cols-1 rounded-lg bg-slate-700 py-5 sm:grid-cols-2 lg:grid-cols-2">
+    <div className="mx-5 mb-8 grid grid-cols-1 rounded-lg bg-gray-700 py-5 sm:grid-cols-2 lg:grid-cols-2">
       <div className="m-5 my-auto">
         <div className="m-auto">
           <img
@@ -185,13 +185,13 @@ function EditComponent({ video, onClose }) {
         <br></br>
         <button
           onClick={handleSubmit}
-          className="mr-2 rounded-lg p-2 text-sm hover:bg-slate-600"
+          className="mr-2 rounded-lg p-2 text-sm hover:bg-gray-600"
         >
           Submit
         </button>
         <button
           onClick={onClose}
-          className="rounded-lg p-2 text-sm hover:bg-slate-600"
+          className="rounded-lg p-2 text-sm hover:bg-gray-600"
         >
           Cancel
         </button>

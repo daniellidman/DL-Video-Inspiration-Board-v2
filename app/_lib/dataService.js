@@ -1,7 +1,10 @@
 import { supabase } from './supabase';
 
 export async function getLikes() {
-  let { data, error } = await supabase.from('videos').select('*');
+  let { data, error } = await supabase
+    .from('videos')
+    .select('*')
+    .order('id', { ascending: false });
 
   if (error) {
     console.error(error);
@@ -36,6 +39,27 @@ export async function updateSupabase(video) {
     .from('videos')
     .update({ name, author, url, thumbnail, notes, yearPublished })
     .eq('id', id);
+
+  console.log(data);
+
+  if (error) throw new Error('Database could not be updated');
+  return data;
+}
+
+export async function submitNewVideo(video) {
+  const { name, author, url, yearPublished, thumbnail, notes } = video;
+
+  const { data, error } = await supabase
+    .from('videos')
+    .insert({
+      name: name,
+      author: author,
+      url: url,
+      notes: notes,
+      thumbnail: thumbnail,
+      yearPublished: yearPublished,
+    })
+    .select();
 
   console.log(data);
 

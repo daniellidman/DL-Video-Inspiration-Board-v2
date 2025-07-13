@@ -1,6 +1,7 @@
 import '@/app/_styles/globals.css';
 import Logo from './_components/logo';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'DL Video Inspiration Board',
@@ -11,17 +12,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="bg-gray-800">
         <header className="flex flex-row justify-between">
-          <Logo />
-          {/* <button className="m-6 text-xl font-bold text-white">+</button> */}
-          <div className="mr-4 content-center">
-            <Image
-              alt="new"
-              src="/new.png"
-              width="20"
-              height="20"
-              className="m-2 inline"
-            />
-          </div>
+          <Link href="/">
+            <Logo />
+          </Link>
+          <Link href="/new">
+            <button className="m-6 text-xl font-bold text-white">+</button>
+          </Link>
         </header>
         <main>{children}</main>
       </body>

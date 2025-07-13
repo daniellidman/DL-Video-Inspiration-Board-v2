@@ -13,6 +13,18 @@ module.exports = {
         protocol: 'https',
         hostname: 'pbs.twimg.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'instagram.fhan5-9.fna.fbcdn.net',
+      },
+      {
+        protocol: 'https',
+        hostname: 'instagram.fhan5-8.fna.fbcdn.net',
+      },
+      {
+        protocol: 'https',
+        hostname: 'instagram.fhan5-11.fna.fbcdn.net',
+      },
     ],
   },
 };
