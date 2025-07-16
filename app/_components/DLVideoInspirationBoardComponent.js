@@ -74,7 +74,6 @@ function VideoDetails({ selectedVideo }) {
               <VideoEmbedCode video={video} />
             </div>
           </div>
-          {/* <VideoInfo video={video} /> */}
           <div className="m-5 overflow-scroll text-wrap break-words text-white">
             <h1 className="text-2xl font-bold">{video.name}</h1>
             <h2 className="mb-1 mt-1 text-lg font-semibold">{video.author}</h2>
