@@ -2,7 +2,6 @@
 import { Tweet } from 'react-tweet';
 
 export function VideoEmbedCode({ video }) {
-  // NO VIDEO URL
   // VIMEO
   if (video.url.includes('vimeo.com')) {
     // Extract Vimeo video ID
