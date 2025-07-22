@@ -3,6 +3,7 @@ import Logo from './_components/logo';
 import Image from 'next/image';
 import Link from 'next/link';
 import { SupabaseProvider } from './_lib/supabase-provider';
+import AddNew from './_components/AddNew';
 
 export const metadata = {
   title: 'DL Video Inspiration Board',
@@ -17,9 +18,7 @@ export default function RootLayout({ children }) {
             <Link href="/">
               <Logo />
             </Link>
-            <Link href="/new">
-              <button className="m-6 text-xl font-bold text-white">+</button>
-            </Link>
+            <AddNew />
           </header>
           <main>{children}</main>
         </SupabaseProvider>
