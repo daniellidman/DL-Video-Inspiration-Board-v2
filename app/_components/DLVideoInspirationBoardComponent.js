@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { updateSupabase } from '../_lib/dataService';
 import { useRouter } from 'next/navigation';
 import { VideoEmbedCode } from './VideoEmbedCode';
+import { useSession } from '@supabase/auth-helpers-react';
 
 function DLVideoInspirationBoardComponent({ allLikes }) {
   let likes = allLikes;
@@ -54,6 +55,8 @@ function VideoDetails({ selectedVideo }) {
   const [showEditComponent, setShowEditComponent] = useState(false);
   const video = selectedVideo;
 
+  const session = useSession();
+
   console.log(selectedVideo);
 
   if (!selectedVideo) {
@@ -88,12 +91,16 @@ function VideoDetails({ selectedVideo }) {
             <h2 className="mt-10 text-lg font-semibold">Notes</h2>
             <p className="mb-10 text-xs">{video.notes}</p>
 
-            <button
-              className="my-6 rounded-lg p-2 text-sm hover:bg-gray-600"
-              onClick={() => setShowEditComponent(!showEditComponent)}
-            >
-              Edit
-            </button>
+            {session ? (
+              <button
+                className="my-6 rounded-lg p-2 text-sm hover:bg-gray-600"
+                onClick={() => setShowEditComponent(!showEditComponent)}
+              >
+                Edit
+              </button>
+            ) : (
+              <></>
+            )}
           </div>
         </div>
       )}
