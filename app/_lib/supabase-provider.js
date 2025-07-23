@@ -19,3 +19,5 @@ export function SupabaseProvider({ children }) {
     </SessionContextProvider>
   );
 }
+
+// Try to combine Supabase with Supabase Provider
