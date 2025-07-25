@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useSession } from '@supabase/auth-helpers-react';
+import { supabase } from '../_lib/supabase';
 
 function AddNew() {
   const session = useSession();
