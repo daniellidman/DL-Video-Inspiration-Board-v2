@@ -522,16 +522,6 @@ export const likes = [
     },
   },
   {
-    name: 'ASPIRE // Unfinished Legacy // :90',
-    link: 'https://vimeo.com/866471624',
-    release_time: '2023-09-20T17:54:06+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/1728172102-2efb2f6c0eb7d8a8c37377d853ce3c568ce1abd252c15b3385d1d07df5365e46-d',
-    },
-    user: { name: 'Cody LaPlant' },
-  },
-  {
     name: 'Audible | I am what I hear #2',
     link: 'https://vimeo.com/297608666',
     release_time: '2018-10-28T21:26:38+00:00',
