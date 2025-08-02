@@ -521,14 +521,4 @@ export const likes = [
       name: 'Neil Halloran',
     },
   },
-  {
-    name: 'Audible | I am what I hear #2',
-    link: 'https://vimeo.com/297608666',
-    release_time: '2018-10-28T21:26:38+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/735421300-81adc2b43a833a131ad6df10802a305fe007fc4470aa72c5bad731158c5c5e51-d',
-    },
-    user: { name: 'Dvein' },
-  },
 ];
