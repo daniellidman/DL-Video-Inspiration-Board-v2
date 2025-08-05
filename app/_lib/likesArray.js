@@ -509,16 +509,4 @@ export const likes = [
     },
     user: { name: 'Meat Dept.' },
   },
-  {
-    name: 'The Fallen of World War II',
-    link: 'https://vimeo.com/128373915',
-    release_time: '2015-05-20T13:47:46+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/633116967-efce94164ea307e8b7a0f28ffc90b9f6a87449517a470080e085e81ee942318e-d',
-    },
-    user: {
-      name: 'Neil Halloran',
-    },
-  },
 ];
