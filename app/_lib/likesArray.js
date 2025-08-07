@@ -288,18 +288,6 @@ export const likes = [
     user: { name: 'Macgregor' },
   },
   {
-    name: "Coldplay 'Up&Up'",
-    link: 'https://vimeo.com/167023867',
-    release_time: '2016-05-17T20:39:43+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/571242299-043d067e118e059e7bb826bd991deb22412923e4428592ad8a7fc3693b5ca795-d',
-    },
-    user: {
-      name: 'Vania Heymann',
-    },
-  },
-  {
     name: 'INSIDE THE BLIND IRIS',
     link: 'https://vimeo.com/835443914',
     release_time: '2023-06-12T13:47:50+00:00',
