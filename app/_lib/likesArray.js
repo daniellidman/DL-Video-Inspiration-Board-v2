@@ -287,18 +287,7 @@ export const likes = [
     },
     user: { name: 'Macgregor' },
   },
-  {
-    name: 'INSIDE THE BLIND IRIS',
-    link: 'https://vimeo.com/835443914',
-    release_time: '2023-06-12T13:47:50+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/1686737954-b5337aef8391c8a12aaef5ecdc9cb052c54e3541bc7d460aeb4bc74f69170fe5-d',
-    },
-    user: {
-      name: 'Douglas Bernardt',
-    },
-  },
+
   {
     name: 'NORTH FACE - Run the Numbers',
     link: 'https://vimeo.com/896335026',
