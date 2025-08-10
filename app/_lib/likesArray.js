@@ -289,18 +289,6 @@ export const likes = [
   },
 
   {
-    name: 'NORTH FACE - Run the Numbers',
-    link: 'https://vimeo.com/896335026',
-    release_time: '2023-12-19T21:20:46+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/1771911152-eba6e115723919369346bd3fc32e8eb6f691ac32f25c9524f25058d1dbadbacd-d',
-    },
-    user: {
-      name: 'Douglas Bernardt',
-    },
-  },
-  {
     name: "UNDER ARMOUR | 'Protect This House' feat. Stephen Curry, Kelsey Plum, Aliyah Boston, & Bryson Tucker",
     link: 'https://vimeo.com/824428840',
     release_time: '2023-05-06T23:09:51+00:00',
