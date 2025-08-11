@@ -287,17 +287,6 @@ export const likes = [
     },
     user: { name: 'Macgregor' },
   },
-
-  {
-    name: "UNDER ARMOUR | 'Protect This House' feat. Stephen Curry, Kelsey Plum, Aliyah Boston, & Bryson Tucker",
-    link: 'https://vimeo.com/824428840',
-    release_time: '2023-05-06T23:09:51+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/1666303326-b2b1108db5795a87c3dad67b5475074eb7947c4469b74601eb1c6f4240a507dc-d',
-    },
-    user: { name: 'WES WALKER' },
-  },
   {
     name: 'NIKE | Petra Collins | DIVISION',
     link: 'https://vimeo.com/928054465',
