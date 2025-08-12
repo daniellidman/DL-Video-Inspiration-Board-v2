@@ -288,16 +288,6 @@ export const likes = [
     user: { name: 'Macgregor' },
   },
   {
-    name: 'NIKE | Petra Collins | DIVISION',
-    link: 'https://vimeo.com/928054465',
-    release_time: '2024-03-27T16:47:56+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/1823251125-b8933fea18c42b3ca90069834199bab4a1d850c40bf17cef44995acbab4626a6-d',
-    },
-    user: { name: 'DIVISION' },
-  },
-  {
     name: "Alzheimers Society 'The Long Goodbye' DC",
     link: 'https://vimeo.com/928290324',
     release_time: '2024-03-28T07:50:45+00:00',
