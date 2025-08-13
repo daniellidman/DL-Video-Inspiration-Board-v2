@@ -278,16 +278,6 @@ export const likes = [
     },
   },
   {
-    name: 'SUBARU | ‘The Outback’',
-    link: 'https://vimeo.com/931620219',
-    release_time: '2024-04-07T00:19:34+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/1828902678-ec8aca867f5c2789c4bd69317f7aa368d6981c790cafe63a14d48a95645a80f2-d',
-    },
-    user: { name: 'Macgregor' },
-  },
-  {
     name: "Alzheimers Society 'The Long Goodbye' DC",
     link: 'https://vimeo.com/928290324',
     release_time: '2024-03-28T07:50:45+00:00',
