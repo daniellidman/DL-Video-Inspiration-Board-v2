@@ -27,7 +27,7 @@ export default function Page() {
   };
 
   return (
-    <form onSubmit={handleLogin} className="space-y-4">
+    <form onSubmit={handleLogin} className="mx-auto mt-8 w-3/4 space-y-4">
       <input
         type="email"
         value={email}

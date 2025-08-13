@@ -1,6 +1,5 @@
 import '@/app/_styles/globals.css';
 import Logo from './_components/logo';
-import Image from 'next/image';
 import Link from 'next/link';
 import { SupabaseProvider } from './_lib/supabase-provider';
 import AddNew from './_components/AddNew';

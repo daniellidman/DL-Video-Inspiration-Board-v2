@@ -1,16 +1,11 @@
+'use client';
+
 import NewVideo from '../_components/NewVideo';
-import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
-import { useSupabaseClient, useSession } from '@supabase/auth-helpers-react';
+import { useSession } from '@supabase/auth-helpers-react';
 
-export const metadata = {
-  title: 'Add New Video | Video Inspiration Board',
-};
-
-export default async function Page() {
-  const {
-    data: { session },
-  } = await supabase.auth.getSession();
+export default function Page() {
+  const session = useSession();
 
   if (!session) {
     redirect('/login');
