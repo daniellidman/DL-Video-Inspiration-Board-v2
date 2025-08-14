@@ -278,18 +278,6 @@ export const likes = [
     },
   },
   {
-    name: "Alzheimers Society 'The Long Goodbye' DC",
-    link: 'https://vimeo.com/928290324',
-    release_time: '2024-03-28T07:50:45+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/1823635006-eff613f8a07e8903b9f458e4f4964812a3872e650768fdcb462e7e77f9b45155-d',
-    },
-    user: {
-      name: 'Charlotte Regan',
-    },
-  },
-  {
     name: "Tove Lo - Glad He's Gone",
     link: 'https://vimeo.com/342789306',
     release_time: '2019-06-17T17:07:48+00:00',
