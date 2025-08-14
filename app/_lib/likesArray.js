@@ -10,16 +10,6 @@ export const likes = [
     user: { name: 'COLORGRAF' },
   },
   {
-    name: 'MAKE HASTE CORP - GROUP - C',
-    link: 'https://vimeo.com/843274868',
-    release_time: '2023-07-07T17:12:11+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/1694811966-b2a778f14c61b64f14e085e48ed4482012dd637fd2938e86f55fe7c19122fdcc-d',
-    },
-    user: { name: 'Ash Thorp' },
-  },
-  {
     name: 'Us By Night 2018 | Title Sequence',
     link: 'https://vimeo.com/302814948',
     release_time: '2018-11-26T11:55:55+00:00',
