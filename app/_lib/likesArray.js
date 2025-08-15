@@ -279,18 +279,7 @@ export const likes = [
       name: 'Vania Heymann',
     },
   },
-  {
-    name: 'BCBS',
-    link: 'https://vimeo.com/242827692',
-    release_time: '2017-11-14T21:46:32+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/666797827-5d197c87b74b197195bc988ba52085f6a043b39556131bcbe4f77021ce3d6a0a-d',
-    },
-    user: {
-      name: 'Daniel Bouquet',
-    },
-  },
+  
   {
     name: 'iHuman - A.I Awakening breakdown',
     link: 'https://vimeo.com/396711438',
