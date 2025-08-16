@@ -279,17 +279,7 @@ export const likes = [
       name: 'Vania Heymann',
     },
   },
-  
-  {
-    name: 'iHuman - A.I Awakening breakdown',
-    link: 'https://vimeo.com/396711438',
-    release_time: '2020-03-10T14:56:27+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/863595397-de5f5135e4f0e8078609c56bedbf8cfbd58fbfdc25fe1577409cc640d1735819-d',
-    },
-    user: { name: 'Rebel Unit' },
-  },
+
   {
     name: 'SHAHMARAN',
     link: 'https://vimeo.com/282591479',
