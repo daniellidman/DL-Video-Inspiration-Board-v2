@@ -1,3 +1,4 @@
+/*
 import Image from 'next/image';
 import Link from 'next/link';
 import { getSingleLike } from '../../_lib/dataService';
@@ -22,3 +23,4 @@ export default async function Page({ params }) {
     </div>
   );
 }
+*/
