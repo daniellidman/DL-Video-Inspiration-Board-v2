@@ -268,19 +268,6 @@ export const likes = [
     },
   },
   {
-    name: "Tove Lo - Glad He's Gone",
-    link: 'https://vimeo.com/342789306',
-    release_time: '2019-06-17T17:07:48+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/791762598-62b154233b3845e58189f58d39e9c38988e8ed4876e51bb253edc3b1324be1c0-d',
-    },
-    user: {
-      name: 'Vania Heymann',
-    },
-  },
-
-  {
     name: 'SHAHMARAN',
     link: 'https://vimeo.com/282591479',
     release_time: '2018-07-31T23:32:28+00:00',
