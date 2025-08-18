@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { updateSupabase } from '../_lib/dataService';
 
-export async function EditComponent({ video }) {
+export default function EditComponent({ video }) {
   const [value, setValue] = useState({
     ...video,
   });
@@ -11,7 +11,7 @@ export async function EditComponent({ video }) {
     setValue((prevState) => ({ ...prevState, [name]: formValue }));
   };
 
-  const handleSubmit = (video) => {
+  const handleSubmit = async (video) => {
     updateSupabase(video);
   };
 
