@@ -11,6 +11,7 @@ import { useSession } from '@supabase/auth-helpers-react';
 function DLVideoInspirationBoardComponent({ allLikes }) {
   let likes = allLikes;
   const [selectedVideo, setSelectedVideo] = useState();
+  const [filteredLikes, setFilteredLikes] = useState(likes);
 
   const handleClick = (video) => {
     setSelectedVideo(video);
@@ -24,10 +25,21 @@ function DLVideoInspirationBoardComponent({ allLikes }) {
   return (
     <div>
       <VideoDetails selectedVideo={selectedVideo} />
+      <div className="flex w-full bg-gray-900">
+        <button>
+          <Image
+            src="/filter.png"
+            alt="Sort Icon"
+            width={30}
+            height={30}
+            className="my-2 ml-5"
+          />
+        </button>
+      </div>
 
       {/* VIDEO LIBRARY */}
       <div className="flex flex-wrap justify-between gap-2">
-        {likes.map((like) => {
+        {filteredLikes.map((like) => {
           return (
             <div className="relative h-64 w-64 flex-grow" key={like.id}>
               <div className="hover:opacity-10">
