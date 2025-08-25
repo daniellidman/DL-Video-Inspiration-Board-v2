@@ -267,18 +267,7 @@ export const likes = [
       name: 'Noel Schoolderman',
     },
   },
-  {
-    name: 'SHAHMARAN',
-    link: 'https://vimeo.com/282591479',
-    release_time: '2018-07-31T23:32:28+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/716824936-1934c3c45d0220fd4ded611ba00a69b5d05af850c4edcfa699d1049bed7ea682-d',
-    },
-    user: {
-      name: 'Paul Kadir Özgür, NSC',
-    },
-  },
+
   {
     name: 'ARTEM SKIY 2023',
     link: 'https://vimeo.com/803407685',
