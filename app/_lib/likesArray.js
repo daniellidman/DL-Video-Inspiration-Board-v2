@@ -279,18 +279,6 @@ export const likes = [
     user: { name: 'Artem Skiy' },
   },
   {
-    name: 'Equilibrium',
-    link: 'https://vimeo.com/937999874',
-    release_time: '2024-04-23T00:36:09+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/1838902357-bcf8280d3579fd8582b9a65f172fe6381667961468e408fad96104348a9b1226-d',
-    },
-    user: {
-      name: 'Ordinary Folk',
-    },
-  },
-  {
     name: 'DIRT DEVIL - THE EXORCIST (Extended)',
     link: 'https://vimeo.com/242954212',
     release_time: '2017-11-15T16:13:16+00:00',
