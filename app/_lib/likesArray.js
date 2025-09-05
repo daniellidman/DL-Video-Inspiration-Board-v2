@@ -343,18 +343,6 @@ export const likes = [
     },
   },
   {
-    name: '“Hunger” Vakna®',
-    link: 'https://vimeo.com/906135469',
-    release_time: '2024-01-24T20:36:40+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/1787758560-1e310f294d9a522574ae133767520e475c06cd872e051293a2cfc605c349a138-d',
-    },
-    user: {
-      name: 'Viktor Skogqvist',
-    },
-  },
-  {
     name: 'Very Noise',
     link: 'https://vimeo.com/384489349',
     release_time: '2020-01-13T11:06:33+00:00',
