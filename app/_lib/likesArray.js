@@ -342,14 +342,4 @@ export const likes = [
       name: 'valentin petit',
     },
   },
-  {
-    name: 'Very Noise',
-    link: 'https://vimeo.com/384489349',
-    release_time: '2020-01-13T11:06:33+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/846566915-6a8d924d48fbf98f9211fa2b318cc9ffffdeec0b9ae7f5e239abdee96b2502c9-d',
-    },
-    user: { name: 'Meat Dept.' },
-  },
 ];
