@@ -319,18 +319,6 @@ export const likes = [
     user: { name: 'MANSON' },
   },
   {
-    name: 'NIKE | Never Settle Never Done (Long Version)',
-    link: 'https://vimeo.com/735253857',
-    release_time: '2022-07-31T21:31:03+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/1479551537-f22de8d9861227e8064cbf31fcf0533dc94bb0f36cf57f471e2d5b0227e536b6-d',
-    },
-    user: {
-      name: 'valentin petit',
-    },
-  },
-  {
     name: 'SALOMON - Tomorrow is yours',
     link: 'https://vimeo.com/765203594',
     release_time: '2022-10-29T09:27:08+00:00',
