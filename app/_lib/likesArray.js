@@ -256,19 +256,6 @@ export const likes = [
     user: { name: 'Sinan Sevinç' },
   },
   {
-    name: 'Jägermeister - Be The Meister',
-    link: 'https://vimeo.com/393715082',
-    release_time: '2020-02-25T16:38:55+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/859321808-3258b7c1327994b1ae540230bc3b2c56a7e31a916e00f9395e7dc27435bf4989-d',
-    },
-    user: {
-      name: 'Noel Schoolderman',
-    },
-  },
-
-  {
     name: 'ARTEM SKIY 2023',
     link: 'https://vimeo.com/803407685',
     release_time: '2023-03-01T10:32:47+00:00',
