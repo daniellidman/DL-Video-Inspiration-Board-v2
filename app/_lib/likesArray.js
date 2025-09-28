@@ -223,18 +223,7 @@ export const likes = [
     },
     user: { name: 'Passion' },
   },
-  {
-    name: 'MACMILLAN',
-    link: 'https://vimeo.com/500832353',
-    release_time: '2021-01-15T12:08:14+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/1036217760-00e68ef770e73683b0e23338aa5abe80c77d056c9cc2234a8a0b130d42bd8c54-d',
-    },
-    user: {
-      name: 'Paul Kadir Özgür, NSC',
-    },
-  },
+
   {
     name: 'Made In Milwaukee // (full length)',
     link: 'https://vimeo.com/934611858',
