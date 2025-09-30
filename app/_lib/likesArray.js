@@ -235,16 +235,6 @@ export const likes = [
     user: { name: 'Cody LaPlant' },
   },
   {
-    name: 'SPLIT SECOND',
-    link: 'https://vimeo.com/sinansevinc/split-second',
-    release_time: '2023-05-15T16:02:03+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/1712570930-fca0db65ea6e5a62b3fcdec455fcd8692d13b25b6cdb81f2d4e4923b9f61c7d3-d',
-    },
-    user: { name: 'Sinan Sevinç' },
-  },
-  {
     name: 'ARTEM SKIY 2023',
     link: 'https://vimeo.com/803407685',
     release_time: '2023-03-01T10:32:47+00:00',
