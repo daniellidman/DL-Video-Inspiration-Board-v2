@@ -275,16 +275,6 @@ export const likes = [
     user: { name: 'SOMEI 晟' },
   },
   {
-    name: 'Cupra — ABDCEFG by Rosalía',
-    link: 'https://vimeo.com/851423378',
-    release_time: '2023-08-03T20:16:32+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/1706102605-1e8c4073487544ee0f1a54b9f274f99a30b6054c5b2966554f6a96f310676b10-d',
-    },
-    user: { name: 'MANSON' },
-  },
-  {
     name: 'SALOMON - Tomorrow is yours',
     link: 'https://vimeo.com/765203594',
     release_time: '2022-10-29T09:27:08+00:00',
