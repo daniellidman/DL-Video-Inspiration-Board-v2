@@ -265,16 +265,6 @@ export const likes = [
     user: { name: 'MEGAFORCE' },
   },
   {
-    name: 'EVANGELION 超•現實',
-    link: 'https://vimeo.com/somei/eva',
-    release_time: '2020-06-27T12:33:33+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/915405414-6308bc2a672627a1a61faaa0e8bed83667b1a5339dd07fc44c7d0ee89a2085e0-d',
-    },
-    user: { name: 'SOMEI 晟' },
-  },
-  {
     name: 'SALOMON - Tomorrow is yours',
     link: 'https://vimeo.com/765203594',
     release_time: '2022-10-29T09:27:08+00:00',
