@@ -182,18 +182,6 @@ export const likes = [
     user: { name: 'MANSON' },
   },
   {
-    name: 'SUKI / WHAT MAKES YOU',
-    link: 'https://vimeo.com/948364263',
-    release_time: '2024-05-20T15:44:16+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/1855510905-6581a007b65d8803453f26e6d69e3863df8430a584bc0b9422958e93eb487adb-d',
-    },
-    user: {
-      name: 'Kevin Castanheira',
-    },
-  },
-  {
     name: 'HSBC // "Rarely A Straight Line"',
     link: 'https://vimeo.com/949330224',
     release_time: '2024-05-22T21:45:06+00:00',
