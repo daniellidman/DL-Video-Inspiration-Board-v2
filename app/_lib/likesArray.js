@@ -182,17 +182,6 @@ export const likes = [
     user: { name: 'MANSON' },
   },
   {
-    name: 'HSBC // "Rarely A Straight Line"',
-    link: 'https://vimeo.com/949330224',
-    release_time: '2024-05-22T21:45:06+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/1857147180-f9e082abf53bdd5c1b7daafabbc2b55c9f2dd3c90d94ed03fe6bc7a9820a4d78-d',
-    },
-    user: { name: 'Oren Soffer' },
-  },
-
-  {
     name: 'Passion 2023 Recap',
     link: 'https://vimeo.com/790231389',
     release_time: '2023-01-17T23:09:07+00:00',
