@@ -191,16 +191,7 @@ export const likes = [
     },
     user: { name: 'Oren Soffer' },
   },
-  {
-    name: 'Adidas X Kawasaki - Legacy',
-    link: 'https://vimeo.com/650939413',
-    release_time: '2021-11-29T01:16:51+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/1414113936-7a27c0deecdebf81a691368b0f19ab6ea6306a91fd5624dec0f29eaabcb3572b-d',
-    },
-    user: { name: 'Xavier Tera' },
-  },
+
   {
     name: 'Passion 2023 Recap',
     link: 'https://vimeo.com/790231389',
