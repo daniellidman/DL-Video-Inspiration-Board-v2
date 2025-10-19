@@ -172,16 +172,6 @@ export const likes = [
     user: { name: 'Sinan Sevinç' },
   },
   {
-    name: 'Nike — Just For Fun',
-    link: 'https://vimeo.com/851704379',
-    release_time: '2023-08-04T16:55:13+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/1706478712-1f591fdde2061151e156c829d7bee802eaa80acc6ff73b2015fbffb638265539-d',
-    },
-    user: { name: 'MANSON' },
-  },
-  {
     name: 'Passion 2023 Recap',
     link: 'https://vimeo.com/790231389',
     release_time: '2023-01-17T23:09:07+00:00',
