@@ -222,16 +222,4 @@ export const likes = [
     },
     user: { name: 'MEGAFORCE' },
   },
-  {
-    name: 'SALOMON - Tomorrow is yours',
-    link: 'https://vimeo.com/765203594',
-    release_time: '2022-10-29T09:27:08+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/1536490353-d430fd957f3859cbd7a2451645ae52707d509281b4050d4c231b0ba732153148-d',
-    },
-    user: {
-      name: 'valentin petit',
-    },
-  },
 ];
