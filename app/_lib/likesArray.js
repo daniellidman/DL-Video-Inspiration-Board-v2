@@ -212,14 +212,4 @@ export const likes = [
     },
     user: { name: 'ANDREAS ROTH' },
   },
-  {
-    name: 'Burberry - Open Spaces / Dir. Megaforce',
-    link: 'https://vimeo.com/637403296',
-    release_time: '2021-10-21T09:49:40+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/1280513620-2e984a8e28be47e615461106d5ff44a4e8d9bf6f03d53c7e2',
-    },
-    user: { name: 'MEGAFORCE' },
-  },
 ];
