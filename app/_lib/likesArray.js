@@ -1,15 +1,5 @@
 export const likes = [
   {
-    name: "Jay Park  'Gimme A Minute (Feat. CHUNG HA)' MV",
-    link: 'https://vimeo.com/1021623515',
-    release_time: '2024-10-21T07:28:57+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/1940890290-a6ce9e2f112f6809a4b3ce3e19cfeb47f2a440d12dcb7372d9b3f7ad43d8a21c-d',
-    },
-    user: { name: 'COLORGRAF' },
-  },
-  {
     name: 'Us By Night 2018 | Title Sequence',
     link: 'https://vimeo.com/302814948',
     release_time: '2018-11-26T11:55:55+00:00',
