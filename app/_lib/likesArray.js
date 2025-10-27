@@ -12,18 +12,6 @@ export const likes = [
     },
   },
   {
-    name: 'A$AP Rocky - Tailor Swif',
-    link: 'https://vimeo.com/1004626478',
-    release_time: '2024-08-30T19:32:06+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/1921192355-e2380059a20cb4cc74e93776ed81403116d16e336fa01318ec04f448cc2f0083-d',
-    },
-    user: {
-      name: 'Vania Heymann',
-    },
-  },
-  {
     name: 'Nike Football - AWAKEN YOUR MADNESS',
     link: 'https://vimeo.com/1000894366',
     release_time: '2024-08-20T19:13:56+00:00',
