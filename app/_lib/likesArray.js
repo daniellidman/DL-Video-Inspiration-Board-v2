@@ -22,16 +22,6 @@ export const likes = [
     user: { name: 'Sam Pilling' },
   },
   {
-    name: "Dick's Sporting Goods - Sports Change Lives",
-    link: 'https://vimeo.com/982891023',
-    release_time: '2024-07-12T01:53:42+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/1898277054-b3b2412feb739caa7232770fd7daa0e858f0c5aedf2b6cfae473eeedb1d6caf0-d',
-    },
-    user: { name: 'Cole Webley' },
-  },
-  {
     name: "John Deere - 'You Just Have to Get in the Seat' | Director's Cut",
     link: 'https://vimeo.com/986000797',
     release_time: '2024-07-17T20:44:14+00:00',
