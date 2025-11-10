@@ -12,16 +12,6 @@ export const likes = [
     },
   },
   {
-    name: 'Nike Football - AWAKEN YOUR MADNESS',
-    link: 'https://vimeo.com/1000894366',
-    release_time: '2024-08-20T19:13:56+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/1940182102-394163b3f9382cf68415cb37b6b60cd8a9e7473b771a2a979b125b5072e03c56-d',
-    },
-    user: { name: 'Sam Pilling' },
-  },
-  {
     name: "John Deere - 'You Just Have to Get in the Seat' | Director's Cut",
     link: 'https://vimeo.com/986000797',
     release_time: '2024-07-17T20:44:14+00:00',
