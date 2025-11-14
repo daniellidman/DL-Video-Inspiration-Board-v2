@@ -11,18 +11,7 @@ export const likes = [
       name: 'Builders Club',
     },
   },
-  {
-    name: "John Deere - 'You Just Have to Get in the Seat' | Director's Cut",
-    link: 'https://vimeo.com/986000797',
-    release_time: '2024-07-17T20:44:14+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/1902273803-f4bc79e3c824c4db89da8757663c741878afe22d86e8152656477102aa07c305-d',
-    },
-    user: {
-      name: 'Janssen Powers',
-    },
-  },
+
   {
     name: 'EVA AIR Creativity is in the Air',
     link: 'https://vimeo.com/283507612',
