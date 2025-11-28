@@ -11,17 +11,6 @@ export const likes = [
       name: 'Builders Club',
     },
   },
-
-  {
-    name: 'EVA AIR Creativity is in the Air',
-    link: 'https://vimeo.com/283507612',
-    release_time: '2018-08-06T17:18:51+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/721632933-c0928ddaa6b35c56ac6cdda367b182f5f6c232d990cec02753d1b03fd66e976d-d',
-    },
-    user: { name: 'Floyd Russ' },
-  },
   {
     name: 'Cox "Visiting Hours"',
     link: 'https://vimeo.com/825296617',
