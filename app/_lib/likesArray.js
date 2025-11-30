@@ -11,16 +11,7 @@ export const likes = [
       name: 'Builders Club',
     },
   },
-  {
-    name: 'Cox "Visiting Hours"',
-    link: 'https://vimeo.com/825296617',
-    release_time: '2023-05-10T01:12:24+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/1667638716-54a26d2b78c36a59dd0f857d82c7796d6d35050b27ad3fb07c74a6d3d5575658-d',
-    },
-    user: { name: 'Eliot Rausch' },
-  },
+
   {
     name: 'Deloitte | CyberSphere',
     link: 'https://vimeo.com/982047406',
