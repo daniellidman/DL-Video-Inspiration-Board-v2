@@ -11,17 +11,6 @@ export const likes = [
       name: 'Builders Club',
     },
   },
-
-  {
-    name: 'Deloitte | CyberSphere',
-    link: 'https://vimeo.com/982047406',
-    release_time: '2024-07-10T16:04:04+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/1897400535-a3260cb2584261be6f754b541523da578609e5a87089edf082f8f4b2db7e015d-d',
-    },
-    user: { name: 'Tendril' },
-  },
   {
     name: 'Lufthansa  - Allegris',
     link: 'https://vimeo.com/961147573',
