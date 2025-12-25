@@ -12,18 +12,6 @@ export const likes = [
     },
   },
   {
-    name: 'Lufthansa  - Allegris',
-    link: 'https://vimeo.com/961147573',
-    release_time: '2024-06-18T12:09:43+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/1873811175-325c8235a7a618cccf6ccb138aa95d646caba218105112de191e4f3913ee0a2a-d',
-    },
-    user: {
-      name: 'Julien Alary Freelance Colorist',
-    },
-  },
-  {
     name: '2024 Production Reel',
     link: 'https://vimeo.com/961770978',
     release_time: '2024-06-19T00:55:21+00:00',
