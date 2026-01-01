@@ -12,16 +12,6 @@ export const likes = [
     },
   },
   {
-    name: '2024 Production Reel',
-    link: 'https://vimeo.com/961770978',
-    release_time: '2024-06-19T00:55:21+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/1874429209-5cfa318307040cc3d9026bb4066dd03471a07d7c28a7fc00613bf117d518495c-d',
-    },
-    user: { name: 'PRACTICAL' },
-  },
-  {
     name: 'AMICA - MORE HUMAN',
     link: 'https://vimeo.com/955359909',
     release_time: '2024-06-09T00:48:50+00:00',
