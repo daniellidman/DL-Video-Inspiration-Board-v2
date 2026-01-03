@@ -11,18 +11,7 @@ export const likes = [
       name: 'Builders Club',
     },
   },
-  {
-    name: 'AMICA - MORE HUMAN',
-    link: 'https://vimeo.com/955359909',
-    release_time: '2024-06-09T00:48:50+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/1866626359-1c6fd7d03716fdcb3bc3815a0dd438f38f0e1ab4e8e96ce067f434c76dda87b4-d',
-    },
-    user: {
-      name: 'Diego Contreras',
-    },
-  },
+
   {
     name: 'THE ULTIMATE RIDE by BMW',
     link: 'https://vimeo.com/958858567',
