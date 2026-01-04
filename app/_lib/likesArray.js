@@ -13,16 +13,6 @@ export const likes = [
   },
 
   {
-    name: 'THE ULTIMATE RIDE by BMW',
-    link: 'https://vimeo.com/958858567',
-    release_time: '2024-06-15T08:01:02+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/1871079707-6c68454d3aa1b0317628dd138c11501ee8e8eeef9981d337f91a009ffc95da02-d',
-    },
-    user: { name: 'Lukas Tielke' },
-  },
-  {
     name: 'Bugaboo - "Designed for the Future"',
     link: 'https://vimeo.com/949379315',
     release_time: '2024-05-23T02:07:03+00:00',
