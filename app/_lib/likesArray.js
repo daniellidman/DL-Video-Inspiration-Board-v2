@@ -13,16 +13,6 @@ export const likes = [
   },
 
   {
-    name: 'Bugaboo - "Designed for the Future"',
-    link: 'https://vimeo.com/949379315',
-    release_time: '2024-05-23T02:07:03+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/1938328583-f8621dac618ceb1ea521e07819eaa4cde2c089e16221d22d2944a8e57f7b2539-d',
-    },
-    user: { name: 'Alex Takács' },
-  },
-  {
     name: "'The Process' Rock Boxing Academy",
     link: 'https://vimeo.com/956873011',
     release_time: '2024-06-12T03:11:36+00:00',
