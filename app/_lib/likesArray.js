@@ -11,19 +11,6 @@ export const likes = [
       name: 'Builders Club',
     },
   },
-
-  {
-    name: "'The Process' Rock Boxing Academy",
-    link: 'https://vimeo.com/956873011',
-    release_time: '2024-06-12T03:11:36+00:00',
-    pictures: {
-      base_link:
-        'https://i.vimeocdn.com/video/1868652221-f718224469223fc98e5e361392898628ec2fdab938eb32345ed30704f90b4cea-d',
-    },
-    user: {
-      name: 'Matthew P. Rojas',
-    },
-  },
   {
     name: 'BORN GUILTY',
     link: 'https://vimeo.com/585966833',
